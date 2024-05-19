@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{078B0940-3904-441A-B576-DFE522F1F6B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PosSystem</RootNamespace>
+    <AssemblyName>PosSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="HidLibrary, Version=3.2.49.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\hidlibrary.3.3.40\lib\net45\HidLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CoreScanner">
+      <HintPath>C:\Program Files\Zebra Technologies\Barcode Scanners\Scanner SDK\Scanner SDK\Sample Applications\bin\Interop.CoreScanner.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="InTheHand.Net.Personal, Version=3.5.605.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL">
+      <HintPath>packages\32feet.NET.3.5.0.0\lib\net\InTheHand.Net.Personal.dll</HintPath>
+    </Reference>
+    <Reference Include="Neodynamic.Windows.ThermalLabelEditor, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c57773567150e634, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Neodynamic\ThermalLabel SDK\v11.0\Bin\WinEditor\Neodynamic.Windows.ThermalLabelEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet.Async, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Renci.SshNet.Async.1.4.0\lib\net40\Renci.SshNet.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp, Version=1.60.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>packages\SkiaSharp.1.60.0\lib\net45\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.4.4.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Windows\Brand_Category_Handler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Brand_Category_Handler.Designer.cs">
+      <DependentUpon>Brand_Category_Handler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Item_Handle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Item_Handle.Designer.cs">
+      <DependentUpon>Item_Handle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Add_Items_To_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Add_Items_To_Bill.Designer.cs">
+      <DependentUpon>Add_Items_To_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Supply_Handler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Supply_Handler.Designer.cs">
+      <DependentUpon>Supply_Handler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Add_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Add_User.Designer.cs">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Admin_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Admin_Form.Designer.cs">
+      <DependentUpon>Admin_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\POS_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\POS_Window.Designer.cs">
+      <DependentUpon>POS_Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Barcode_Handler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Barcode_Handler.Designer.cs">
+      <DependentUpon>Barcode_Handler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Cashier_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Cashier_Form.Designer.cs">
+      <DependentUpon>Cashier_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\brand.cs" />
+    <Compile Include="Class\category.cs" />
+    <Compile Include="Connection\Connection.cs" />
+    <Compile Include="CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Daily_Sales_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Daily_Sales_Item.Designer.cs">
+      <DependentUpon>Daily_Sales_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dash_Admins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Dash_Admins.Designer.cs">
+      <DependentUpon>Dash_Admins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Dash_Cashier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Dash_Cashier.Designer.cs">
+      <DependentUpon>Dash_Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Discount.Designer.cs">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Discount_Quantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Discount_Quantity.Designer.cs">
+      <DependentUpon>Discount_Quantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Item_Search_Cashier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Item_Search_Cashier.Designer.cs">
+      <DependentUpon>Item_Search_Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Inventory_Order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Inventory_Order.Designer.cs">
+      <DependentUpon>Inventory_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\item.cs" />
+    <Compile Include="Class\order.cs" />
+    <Compile Include="Class\Program.cs" />
+    <Compile Include="Windows\Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Pay.Designer.cs">
+      <DependentUpon>Pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\Qunatity_Changer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Qunatity_Changer.Designer.cs">
+      <DependentUpon>Qunatity_Changer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Report_Genorator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Report_Genorator.Designer.cs">
+      <DependentUpon>Report_Genorator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Return_Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Return_Check.Designer.cs">
+      <DependentUpon>Return_Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Return_Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Return_Process.Designer.cs">
+      <DependentUpon>Return_Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Search_Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Search_Items.Designer.cs">
+      <DependentUpon>Search_Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\supplier.cs" />
+    <Compile Include="Class\user.cs" />
+    <Compile Include="Windows\Summary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Summary.Designer.cs">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\View_Inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\View_Inventory.Designer.cs">
+      <DependentUpon>View_Inventory.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Windows\Brand_Category_Handler.resx">
+      <DependentUpon>Brand_Category_Handler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Item_Handle.resx">
+      <DependentUpon>Item_Handle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Add_Items_To_Bill.resx">
+      <DependentUpon>Add_Items_To_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Supply_Handler.resx">
+      <DependentUpon>Supply_Handler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Add_User.resx">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Admin_Form.resx">
+      <DependentUpon>Admin_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\POS_Window.resx">
+      <DependentUpon>POS_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Barcode_Handler.resx">
+      <DependentUpon>Barcode_Handler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Cashier_Form.resx">
+      <DependentUpon>Cashier_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Daily_Sales_Item.resx">
+      <DependentUpon>Daily_Sales_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Dash_Admins.resx">
+      <DependentUpon>Dash_Admins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Dash_Cashier.resx">
+      <DependentUpon>Dash_Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Discount.resx">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Discount_Quantity.resx">
+      <DependentUpon>Discount_Quantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Item_Search_Cashier.resx">
+      <DependentUpon>Item_Search_Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Inventory_Order.resx">
+      <DependentUpon>Inventory_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Pay.resx">
+      <DependentUpon>Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Windows\Qunatity_Changer.resx">
+      <DependentUpon>Qunatity_Changer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Report_Genorator.resx">
+      <DependentUpon>Report_Genorator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Return_Check.resx">
+      <DependentUpon>Return_Check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Return_Process.resx">
+      <DependentUpon>Return_Process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Search_Items.resx">
+      <DependentUpon>Search_Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Summary.resx">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\View_Inventory.resx">
+      <DependentUpon>View_Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Windows\packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Windows\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ZebraScannerSO">
+      <Guid>{6D00CA30-8C4E-429A-AE9C-83B20C59D10B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets" Condition="Exists('packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets'))" />
+  </Target>
+</Project>

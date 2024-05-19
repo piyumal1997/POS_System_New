@@ -1,0 +1,8 @@
+Writing nice receipt in C# WPF for printing on thermal printer POS: 
+	https://stackoverflow.com/questions/28096578/writing-nice-receipt-in-c-sharp-wpf-for-printing-on-thermal-printer-pos
+
+How do I extract data from a DataTable in C#
+	https://stackoverflow.com/questions/1346132/how-do-i-extract-data-from-a-datatable
+
+Insert multiple rows
+	https://www.digitalocean.com/community/tutorials/sql-insert-multiple-rows
